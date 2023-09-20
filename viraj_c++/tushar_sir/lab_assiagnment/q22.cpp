@@ -2,18 +2,20 @@
 // print that date in main() in dd/mm/yy format.
 
 #include<iostream>
+#include<cctype>
 using namespace std;
 
-void getDate(){
-
+void getDate(int *day, int *month, int *year){
+cout<<*day<<"/"<<*month<<"/"<<*year%100;
 }
 
 
 int main(){
     int day, month, year;
-    cout<<"Enter the day, month and year";
+    cout<<"Enter the day, month and year: ";
     cin>>day>>month>>year;
-    getDate(&day)
+    
+    getDate(&day, &month, &year);
     
 
 
