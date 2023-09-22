@@ -1,8 +1,35 @@
+Q1: List all the files and sub directories of the directory /bin.
 ls -la /bin/
-To List all the files and sub directories of the directory /bin.
+
+Q2: List all the files including hidden files in your current directory.
 ls -la
-List all the files including hidden files in your current directory.
+
+Q3: List all the files starting with letter ‘r’ in your current directory.
 ls r* 
-List all the files starting with letter ‘r’ in your current directory.
+
+Q4: List all the files having three characters in their names, from your current directory.
 ls ??? 
-List all the files having three characters in their names, from your current directory.
+
+Q5: List all the files with extension .doc in your current directory.
+ls *.doc
+
+Q6: List all the files having the first letter of their name within the range ‘l’ to‘s’, from your current directory.
+ls [l-s]* 
+
+Q7: Create a file text1 and read its input from keyboard. 
+touch text1 && echo "sample" 
+
+Q8: Copy the contents of file text1 to another file text2.
+cp text1 text2
+
+Q9: Append the contents of file text2 to file text1.
+cat text2 >> text1
+
+Q10. Count the number of files in the current directory.
+ls | wc -l
+
+Q11. Display the output of command ls –l to a file and on the output screen.
+ls -l >> text1 && ls -l
+
+12. From file text1 print all lines starting from 10th line.
+tail -n +10 text1
