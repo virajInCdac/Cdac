@@ -1,2 +1,8 @@
 ls -la /bin/
 To List all the files and sub directories of the directory /bin.
+ls -la
+List all the files including hidden files in your current directory.
+ls r* 
+List all the files starting with letter ‘r’ in your current directory.
+ls ??? 
+List all the files having three characters in their names, from your current directory.
