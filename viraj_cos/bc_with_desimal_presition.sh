@@ -7,6 +7,7 @@ if [ $num1 -ne 0 ]
  then echo "valid numbers"
 fi
 
+#scale is used to decide the number of desimal valuses
 num3= echo "scale=100; $num1/$num2"  | bc
 
 echo $num3 
