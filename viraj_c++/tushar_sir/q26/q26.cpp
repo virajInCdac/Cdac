@@ -1,10 +1,7 @@
-// 25. Write a program to delete an element from a user entered array. Accept position of element to
-// be deleted from user.
-
+// 26. Write a program to insert an element into an array. Accept position of element to be inserted
+// from user.
 #include<iostream>
 using namespace std;
-
-
 
 void array_print(int *a, int n)
 {
@@ -14,18 +11,17 @@ void array_print(int *a, int n)
     }
 }
 
-int element_delete(int *a, int position, int size)
+void element_add(int *a  , int position, int size, int element)
 {
-    for (int i = position-1; i< size; i++){
-        a[i] = a[i+1];
+    for(int i = size-2; i > position; i--){
+        a[i+1]=a[i];
     }
-    return size-1;
-    
+    a[position-1]= element;    
 }
 
 //remeber to subtarct 1 from position_to_be_deleted
 int main(){
-    int size_of_array, position_to_be_deleted;
+    int size_of_array, position_to_be_add,new_element;
     cout<<"Enter the size of the array: ";
     cin>>size_of_array;
     int arr[size_of_array];
@@ -35,11 +31,13 @@ int main(){
         cout<<"Enter element at "<<i+1<<" position into the array: ";
         cin >> arr[i];
     }
-    //before deletion
+    //before Addition
     array_print(arr, size_of_array);
-    cout << "\nEnter the position to be deleted: ";
-    cin >> position_to_be_deleted;
-    size_of_array=element_delete(arr, position_to_be_deleted, size_of_array);
+    cout << "\nEnter the position to be add element: ";
+    cin >> position_to_be_add;
+    cout<<"\nEnter new element: ";
+    cin>>new_element;
+    element_add(arr, position_to_be_add, size_of_array, new_element);
     array_print(arr, size_of_array);
 
 
