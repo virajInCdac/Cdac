@@ -31,5 +31,19 @@ ls | wc -l
 Q11. Display the output of command ls –l to a file and on the output screen.
 ls -l >> text1 && ls -l
 
-12. From file text1 print all lines starting from 10th line.
+Q12. From file text1 print all lines starting from 10th line.
 tail -n +10 text1
+
+Q13. Find the number of users currently logged on to the system.
+cut -d: -f1 /etc/passwd | wc -l //user accounts are stored in etc directory and inside passwd user list is 
+//preset, earlier it used to contain passwords, however now it is just the user list.
+// here -d is for delimiter and -f1 is for the first file, can replace 1 by n in f1 ex f2.
+//can user cat command as well in place of cut
+
+Q14: Delete all the files with their names starting with “tmp”.
+ls | rm tmp*
+
+
+
+
+
