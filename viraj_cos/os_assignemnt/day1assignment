@@ -50,6 +50,18 @@ Section 2:
 Q1: Count the total number of words in file text1.
 wc -w file_with_ls_lines
 
+Q2: List the contents of ls command page wise.
+less file_name or more file_name //less dose not load the entire file at once and hence is good for large files. more is a primitive version of less. It loads the entire file and then it displys the result.
+
+Q3: Create a file FILE2 with some text in it. Increase the no. of hard links to the file FILE2 to 3 and check the inode number and link count 
+for those names.
+ln location file_name // To create hardlink
+ln -s location file_name // to create softlink
+ls -il
+//if file name is ommited, then the link will be created with ths same name as the original file.
+//Hard link is not allowed for directories. if the original file is Deleted,even then the hardlink will stay intact.
+//softlink can me made for directoried. if the original file is Deleted, then the softlink will be deleated as well.
+
 
 
 
