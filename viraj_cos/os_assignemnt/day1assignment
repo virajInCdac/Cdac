@@ -1,3 +1,5 @@
+Section 1:
+
 Q1: List all the files and sub directories of the directory /bin.
 ls -la /bin/
 
@@ -42,6 +44,11 @@ cut -d: -f1 /etc/passwd | wc -l //user accounts are stored in etc directory and 
 
 Q14: Delete all the files with their names starting with “tmp”.
 ls | rm tmp*
+
+Section 2:
+
+Q1: Count the total number of words in file text1.
+wc -w file_with_ls_lines
 
 
 
