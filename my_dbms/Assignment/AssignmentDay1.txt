@@ -1,0 +1,44 @@
+Assignment No. 2
+Create a database named college
+Create a table name student in college database with following structure
+roll,name,class,marks,age with respective datatypes.
+Check the structure of the table.
+Alter the datatype of marks from float to integer
+Alter the table to remove the column age
+Show all the tables in database college.
+Truncate the table student
+Drop the table and database also.
+
+ans:
+2. create database College;
+3. use database College; 
+create table Students (roll int, name varchar(20), class varchar(5), marks float, age float);
+-> Query OK, 0 rows affected (0.02 sec)
+
+4. desc Students;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| roll  | int         | YES  |     | NULL    |       |
+| name  | varchar(20) | YES  |     | NULL    |       |
+| class | varchar(5)  | YES  |     | NULL    |       |
+| marks | float       | YES  |     | NULL    |       |
+| age   | float       | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+rows in set (0.00 sec)
+5.> alter table Students modify column marks int;
+Query OK, 0 rows affected (0.04 sec)
+6.alter table Students drop column age;
+Query OK, 0 rows affected (0.02 sec)
+7. show tables;
++-------------------+
+| Tables_in_College |
++-------------------+
+| Students          |
++-------------------+
+8. truncate Students;
+Query OK, 0 rows affected (0.03 sec)
+9. drop table Students;
+Query OK, 0 rows affected (0.01 sec)
+10. drop database College;
+Query OK, 0 rows affected (0.01 sec)
