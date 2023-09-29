@@ -1,0 +1,29 @@
+Assignment No. 3
+Create a database named college
+-> create database college;
+
+Create a table name student in college database with following structure
+roll,name,class,marks,age with respective datatypes.
+-> use college;
+-> create table student (roll tinyint, name varchar(20), class varchar(10), marks float, age tinyint);
+Query OK, 0 rows affected (0.03 sec)
+
+Insert at least 5 rows in the table.
+->  insert into student(roll) values (1); or
+    insert into student values (2, 'Rajkumar', 'dac', 99.99, 108);
+    insert into student (name, roll, marks, class, age) values ('Ranajana',3,0,'Pachvi',11);
+    insert into student values (4,"sam",'dai',95,22);
+    insert into student (name, roll, marks, class, age) values ('amma',5,0,'ii',15);
+
+Delete the entry of roll number 4
+->  delete from student where roll = 4;
+Query OK, 1 row affected (0.00 sec)
+
+Update the marks of roll number 3
+->  update student set marks = marks -5 where roll = 3;
+Query OK, 1 row affected (0.01 sec)
+
+Give additional grace marks of 0.5 to all students.
+Truncate the table
+Insert the data again using multi-insert statement.
+
