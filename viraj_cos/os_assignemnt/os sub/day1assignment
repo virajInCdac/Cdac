@@ -1,0 +1,109 @@
+Section 1:
+
+Q1: List all the files and sub directories of the directory /bin.
+ls -la /bin/
+
+Q2: List all the files including hidden files in your current directory.
+ls -la
+
+Q3: List all the files starting with letter ‘r’ in your current directory.
+ls r* 
+
+Q4: List all the files having three characters in their names, from your current directory.
+ls ??? 
+
+Q5: List all the files with extension .doc in your current directory.
+ls *.doc
+
+Q6: List all the files having the first letter of their name within the range ‘l’ to‘s’, from your current directory.
+ls [l-s]* 
+
+Q7: Create a file text1 and read its input from keyboard. 
+touch text1 && echo "sample" 
+
+Q8: Copy the contents of file text1 to another file text2.
+cp text1 text2
+
+Q9: Append the contents of file text2 to file text1.
+cat text2 >> text1
+
+Q10. Count the number of files in the current directory.
+ls | wc -l
+
+Q11. Display the output of command ls –l to a file and on the output screen.
+ls -l >> text1 && ls -l
+
+Q12. From file text1 print all lines starting from 10th line.
+tail -n +10 text1
+
+Q13. Find the number of users currently logged on to the system.
+cut -d: -f1 /etc/passwd | wc -l //user accounts are stored in etc directory and inside passwd user list is 
+//preset, earlier it used to contain passwords, however now it is just the user list.
+// here -d is for delimiter and -f1 is for the first file, can replace 1 by n in f1 ex f2.
+//can user cat command as well in place of cut
+
+Q14: Delete all the files with their names starting with “tmp”.
+ls | rm tmp*
+
+Section 2:
+
+Q1: Count the total number of words in file text1.
+wc -w file_with_ls_lines
+
+Q2: List the contents of ls command page wise.
+less file_name or more file_name //less dose not load the entire file at once and hence is good for large files. more is a primitive version of less. It loads the entire file and then it displys the result.
+
+Q3: Create a file FILE2 with some text in it. Increase the no. of hard links to the file FILE2 to 3 and check the inode number and link count 
+for those names.
+ln location file_name // To create hardlink
+ln -s location file_name // to create softlink
+ls -il
+//if file name is ommited, then the link will be created with ths same name as the original file.
+//Hard link is not allowed for directories. if the original file is Deleted,even then the hardlink will stay intact.
+//softlink can me made for directoried. if the original file is Deleted, then the softlink will be deleated as well.
+
+4.Using one single command, display the output of “who” and “pwd” commands.
+who;pwd
+
+5. Display the system date in following format:
+Today is Friday, 17 May 96
+echo -n  "Today is "; date
+
+6. Display the following text message on the monitor screen.
+Deposited $100 to you account
+echo "Deposited \$100 to your account"
+
+7. Display the following message on the monitor.
+The long listing of my home dir ………… is …………
+(Hint: Use ls – l and pwd commands)
+f#!/bin/bash
+
+echo "The long listing of my home dir `pwd` is "
+ls -l
+
+
+Section 3:-
+
+1. Using vi editor:
+a) Create a file “Data1.txt
+
+vim Data1.txt
+
+b) Save the file and exit from the vi editor.
+
+:wq
+
+c) Open the vi editor without specifying a file name
+vi
+
+d) Write some text and and save it to a file “MyData2.txt”
+:w MyData2.txt
+
+e) Repeat point ( c ) but after writing some text don’t save and just exit “vi”
+
+vi
+
+:q!
+
+
+

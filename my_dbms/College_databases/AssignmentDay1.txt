@@ -1,0 +1,14 @@
+Assignment No. 2
+Create a database named college
+Create a table name student in college database with following structure
+roll,name,class,marks,age with respective datatypes.
+Check the structure of the table.
+Alter the datatype of marks from float to integer
+Alter the table to remove the column age
+Show all the tables in database college.
+Truncate the table student
+Drop the table and database also.
+
+ans:
+2. create database College;
+3. 
