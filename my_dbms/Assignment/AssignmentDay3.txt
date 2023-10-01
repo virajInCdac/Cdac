@@ -24,6 +24,11 @@ Update the marks of roll number 3
 Query OK, 1 row affected (0.01 sec)
 
 Give additional grace marks of 0.5 to all students.
+->  update student set marks = marks + 0.5;
 Truncate the table
+-> truncate student;
 Insert the data again using multi-insert statement.
+-> Insert into student values (1, 'Vishal', 'dac', 100, 27), 
+                        (2, 'Rajkuma', 'dac', 100, 24),
+                        (3, 'dummy', 'NA',0,0);
 
