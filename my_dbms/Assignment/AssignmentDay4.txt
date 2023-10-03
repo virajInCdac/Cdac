@@ -1,0 +1,33 @@
+Assignment No. 4
+Create a database named college
+-> create database college;
+
+Create a table name student in college database with following structure
+roll,name,class,marks,age with respective datatypes.
+-> use college;
+-> create table student (roll tinyint, name varchar(20), class varchar(10), marks float, age tinyint);
+
+Apply the following MySQL clause to this table.
+Creating, Altering, Dropping Constraints
+->  ALTER TABLE student ADD email VARCHAR(255);
+     alter table student add constraint unique_email Unique (email);
+    ALTER TABLE student DROP CONSTRAINT  unique_email;
+Aggregate Functions: SUM(), AVG(), COUNT(), MAX(), MIN(), COUNT(), Group By, Having
+Clause
+-> select avg(marks) from student;
+    select sum(marks) from student;
+    select COUNT(marks) from student;
+    select Max(marks) from student;
+    select MIN(marks) from student;
+    select class,max(marks)as `score` from student group by class;
+    select max(marks)as `score` from student group by class having `score`>80;
+
+Using Like, Distinct, Order By, Between...And
+->  select distinct class from student;
+    select name,marks from student where name like "v%";
+    select * from student order by name;
+    select * from student where marks between 60 and 90;
+
+Comparing Nulls, Using IN/Not-In
+-> SELECT * FROM student  WHERE email IS NULL;
+    SELECT * FROM student  WHERE email IS Not NULL;
