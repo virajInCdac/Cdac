@@ -16,12 +16,9 @@ class IsDouble{
 		}
 		if (scanner.hasNextDouble()){
 			d2 = scanner.nextDouble();
-			//System.out.println("first "+d1+" second "+d2);
+			System.out.println("first "+d1+" second "+d2);
 		}
-		if (d1 != Null){
-			System.out.println("first "+d1);
-		}
-		
+		System.out.println("first "+d1);
 		//System.out.println("first "+d1+" second ");
 	}
 }
