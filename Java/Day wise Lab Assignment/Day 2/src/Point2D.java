@@ -28,14 +28,14 @@ class Point2D{
 		int result[] = show();
 		System.out.println(result[0] +" "+result[1]);
 	} */
-	private int x;
-	private int y;
-	Point2D(int x, int y){
+	private double x;
+	private double y;
+	Point2D(double x, double y){
 		this.x = x;
 		this.y = y;
 	}
 	public String show() {
-		return (x+" & "+y);
+		return (x+" & "+y+" are the co-ordinates");
 	}
 	public boolean isEqual(Point2D second){
 		if (x == second.x && y == second.y){
@@ -51,7 +51,9 @@ class Point2D{
 		double r = Math.sqrt(x+y);  
 		return r;
 	}
-	public static void main (String[] args){
+	//To run this replace the below line with public static void main (String[] args)
+	// removed for the tester class
+	public static void main (){
 		Point2D pts = new Point2D(3,4);
 		Point2D pts2 = new Point2D(1,7);
 		String result = pts.show();
