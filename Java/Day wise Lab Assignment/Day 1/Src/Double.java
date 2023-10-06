@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 class IsDouble{
 	public static void main (String[] input){
-		double d1, d2;
+		double d1=0, d2=0;
 		System.out.println("Enter the Numbers");
 		Scanner scanner = new Scanner(System.in);
 		//Here we care expecting to enter two double value with a space in b/w Ex: 14.5 18.9
@@ -18,7 +18,8 @@ class IsDouble{
 			d2 = scanner.nextDouble();
 			System.out.println("first "+d1+" second "+d2);
 		}
-		System.out.println("first "+d1);
+		System.out.println("Avarage is"+(d1+d2)/2);
+		
 		//System.out.println("first "+d1+" second ");
 	}
 }
