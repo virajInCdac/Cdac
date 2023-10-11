@@ -6,6 +6,7 @@ import com.app.fruits.*;
 
 public class FruitBasket {
 	public static void main(String[] args) {
+		int noOfItemsInBasketAdded = 0;
 		System.out.println("Enter the size of Basket!");
 		Scanner sc = new Scanner(System.in);
 		Fruit[] fruitBasket = new Fruit[sc.nextInt()];
@@ -16,40 +17,52 @@ public class FruitBasket {
 //		}
 		//The above code was not required Scanner sc = new Scanner(System.in); new keyword was missing
 		
-		System.out.println("Ok Basket is created\nEnter\n1. Add Mango\n2. Add Orange\n3. Add Apple");
-		int choice = sc.nextInt();
+		int choice;
+		System.out.println("Ok Basket is created");
 		
-		switch (choice) {
-		case 1:
-			System.out.println("Enter the name of the mango. eg: hafus, langda");
-			String name = sc.next();
-			System.out.println("Enter the quantity.");
-			double qty = sc.nextDouble();
-			System.out.println("Which color mango you want?.");
-			String color = sc.next();
-			Mango m = new Mango(color,qty,name,true );
-			break;
-		case 2:
-			System.out.println("Enter the name of the Orange eg: Narangi");
-			name = sc.next();
-			System.out.println("Enter the quantity.");
-			qty = sc.nextDouble();
-			System.out.println("Which color Orange you want?.");
-			color = sc.next();
-			Orange O = new Orange(color, qty, name, true);
-			break;
-		case 3: 
-			System.out.println("Enter the name of the Apple eg: Kashmari");
-			name = sc.next();
-			System.out.println("Enter the quantity.");
-			qty = sc.nextDouble();
-			System.out.println("Which color Apple you want?.");
-			color = sc.next();
-			break;
-		default:
-			System.out.println("Incorrect option");
-			break;
+		for (int i = 0; i < fruitBasket.length; i++) {
+			if (noOfItemsInBasketAdded < fruitBasket.length) {
+				System.out.println("Enter\n1. Add Mango\n2. Add Orange\n3. Add Apple");
+				choice = sc.nextInt();
+				switch (choice) {
+				case 1:
+					System.out.println("Enter the name of the mango. eg: hafus, langda");
+					String name = sc.next();
+					System.out.println("Enter the quantity.");
+					double qty = sc.nextDouble();
+					System.out.println("Which color mango you want?.");
+					String color = sc.next();
+					fruitBasket[i] = new Mango(color,qty,name,true );
+					break;
+				case 2:
+					System.out.println("Enter the name of the Orange eg: Narangi");
+					name = sc.next();
+					System.out.println("Enter the quantity.");
+					qty = sc.nextDouble();
+					System.out.println("Which color Orange you want?.");
+					color = sc.next();
+					fruitBasket[i] = new Orange(color, qty, name, true);
+					break;
+				case 3: 
+					System.out.println("Enter the name of the Apple eg: Kashmari");
+					name = sc.next();
+					System.out.println("Enter the quantity.");
+					qty = sc.nextDouble();
+					System.out.println("Which color Apple you want?.");
+					color = sc.next();
+					fruitBasket[i] = new Apple (color, qty, name, true);
+					break;
+				default:
+					System.out.println("Incorrect option");
+					break;
+				}
+			} else {
+				System.out.println("Basket full");
+				System.exit(0);
+			}
+			
 		}
+		
 		/*
 		 * Apple A = new Apple("Red", 56, "Apple", true);
 		 * System.out.println("The value of A is "+A);
