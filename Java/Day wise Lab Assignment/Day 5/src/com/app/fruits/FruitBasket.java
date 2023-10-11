@@ -1,6 +1,5 @@
 package com.app.fruits;
 
-import java.io.InputStream;
 import java.util.Arrays;
 import java.util.Scanner;
 import com.app.fruits.*;
@@ -8,9 +7,16 @@ import com.app.fruits.*;
 public class FruitBasket {
 	public static void main(String[] args) {
 		System.out.println("Enter the size of Basket!");
-		Scanner sc = Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		Fruit[] fruitBasket = new Fruit[sc.nextInt()];
-		System.out.println("Ok Basket is created\nEnter1. Add Mango\n2. Add Orange\n3. Add Apple");
+		//Initializing the fruit array of references so that we don't receive Exception in thread "main" java.lang.NullPointerException
+		//at com.app.fruits.FruitBasket.main(FruitBasket.java:12)
+//		for (int i = 0; i < fruitBasket.length; i++){
+//			fruitBasket[i] = new Mango("",0,"",true );
+//		}
+		//The above code was not required Scanner sc = new Scanner(System.in); new keyword was missing
+		
+		System.out.println("Ok Basket is created\nEnter\n1. Add Mango\n2. Add Orange\n3. Add Apple");
 		int choice = sc.nextInt();
 		
 		switch (choice) {
@@ -59,8 +65,8 @@ public class FruitBasket {
 		
 }
 
-	private static Scanner Scanner(InputStream in) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+//	private static Scanner Scanner(InputStream in) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
 }
