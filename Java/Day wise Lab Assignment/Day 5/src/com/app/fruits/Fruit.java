@@ -35,4 +35,8 @@ public class Fruit {
 		return "No Specific taste";
 	}
 	
+	public boolean is_fresh() {
+		return fresh;
+	}
+	
 }

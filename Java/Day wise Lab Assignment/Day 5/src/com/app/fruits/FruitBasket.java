@@ -22,6 +22,7 @@ public class FruitBasket {
 		
 		for (int i = 0; i < fruitBasket.length; i++) {
 			if (noOfItemsInBasketAdded < fruitBasket.length) {
+				noOfItemsInBasketAdded++;
 				System.out.println("Enter\n1. Add Mango\n2. Add Orange\n3. Add Apple");
 				choice = sc.nextInt();
 				switch (choice) {
@@ -74,10 +75,29 @@ public class FruitBasket {
 		 * ((Mango)B).pulp(); Fruit O = new Orange("Orange", 50, "Nagpuri", true);
 		 * ((Orange)O).juice(); A.jam();
 		 */
-		
+		for (Fruit f: fruitBasket) {
+			if (f instanceof Apple)
+				 System.out.println(((Apple)f).getName());//((Apple)f).getName();
+			else if (f instanceof Mango)
+				System.out.println(((Mango)f).getName());//((Mango)f).getName();
+			else if (f instanceof Orange)
+				System.out.println(((Orange)f).getName());//((Orange)f).getName();
+			
+		}
+		//5. Display name,color,weight , taste of all fresh fruits , in the basket.
+		for (Fruit f: fruitBasket) {
+			if (f instanceof Apple)
+				 System.out.println(((Apple)f)+ " and I am "+(((Apple)f).is_fresh()?"Fresh":"Not Frsh"));//((Apple)f).getName();
+			else if (f instanceof Mango)
+				System.out.println(((Mango)f)+ " and I am "+ (f.is_fresh()?"Fresh": "Not Fresh"));//((Mango)f).getName();
+			else if (f instanceof Orange)
+				System.out.println(f+ " and I am "+ (f.is_fresh()?"Fresh": "Not Fresh"));//Will call 
+			
+		}
 		
 }
 
+	
 //	private static Scanner Scanner(InputStream in) {
 //		// TODO Auto-generated method stub
 //		return null;

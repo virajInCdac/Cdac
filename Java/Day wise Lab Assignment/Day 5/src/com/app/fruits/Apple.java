@@ -19,4 +19,8 @@ public class Apple extends Fruit{
 	public void jam() {
 		System.out.println("Name "+super.getName()+" "+"making jam!");
 	}
+	
+	public boolean is_fresh() {
+		return super.is_fresh();
+	}
 }
