@@ -119,6 +119,10 @@ public class FruitBasket {
 //				f.set_fresh();
 			System.out.println(f+ " and I am "+(f.is_fresh()?"Fresh":"Not Frsh"));//((Apple)f).getName();
 		}	
+		
+		for (Fruit f: fruitBasket) {
+			f.equals(fruitBasket);
+		}
 
 }
 		

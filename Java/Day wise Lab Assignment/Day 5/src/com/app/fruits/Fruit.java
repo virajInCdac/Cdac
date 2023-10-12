@@ -1,4 +1,5 @@
 package com.app.fruits;
+//import java.lang.String;
 
 public class Fruit {
 	private String color;
@@ -42,4 +43,18 @@ public class Fruit {
 	public void set_fresh() {
 		fresh = false;
 	}
+	
+//	@Override
+//	public boolean equals(Object obj) {
+//		return true;
+//	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this.getClass().getName() == "Orange") {
+			
+		}
+		return true;
+	}
+
 }
