@@ -77,27 +77,51 @@ public class FruitBasket {
 		 */
 		for (Fruit f: fruitBasket) {
 			if (f instanceof Apple)
-				 System.out.println(((Apple)f).getName());//((Apple)f).getName();
+				 System.out.println(f.getName());//((Apple)f).getName();
 			else if (f instanceof Mango)
-				System.out.println(((Mango)f).getName());//((Mango)f).getName();
+				System.out.println(f.getName());//((Mango)f).getName();
 			else if (f instanceof Orange)
-				System.out.println(((Orange)f).getName());//((Orange)f).getName();
+				System.out.println(f.getName());//((Orange)f).getName();
 			
 		}
+
+		
 		//5. Display name,color,weight , taste of all fresh fruits , in the basket.
 		for (Fruit f: fruitBasket) {
-			if (f instanceof Apple)
-				 System.out.println(((Apple)f)+ " and I am "+(((Apple)f).is_fresh()?"Fresh":"Not Frsh"));//((Apple)f).getName();
-			else if (f instanceof Mango)
-				System.out.println(((Mango)f)+ " and I am "+ (f.is_fresh()?"Fresh": "Not Fresh"));//((Mango)f).getName();
-			else if (f instanceof Orange)
-				System.out.println(f+ " and I am "+ (f.is_fresh()?"Fresh": "Not Fresh"));//Will call 
-			
-		}
+//			if (f instanceof Apple)
+//				 System.out.println(((Apple)f)+ " and I am "+(((Apple)f).is_fresh()?"Fresh":"Not Frsh"));//((Apple)f).getName();
+//			else if (f instanceof Mango)
+//				System.out.println(((Mango)f)+ " and I am "+ (f.is_fresh()?"Fresh": "Not Fresh"));//((Mango)f).getName();
+//			else if (f instanceof Orange)
+//				System.out.println(f+ " and I am "+ (f.is_fresh()?"Fresh": "Not Fresh"));//Will call 
+			if (f instanceof Apple || f instanceof Orange)
+				f.set_fresh();
+			System.out.println(f+ " and I am "+(f.is_fresh()?"Fresh":"Not Frsh"));//((Apple)f).getName();
+		}	
 		
-}
+		//6. Mark a fruit in a basket , as stale(=not fresh)
+		System.out.println("Enter a index at which the fruit is not frsh.");
+		int index = sc.nextInt();
+		if (index >=  1 || index < noOfItemsInBasketAdded )
+			fruitBasket[index-1].set_fresh();
+		
+		else
+			System.out.println("Invalid Index");
+		
+		for (Fruit f: fruitBasket) {
+//			if (f instanceof Apple)
+//				 System.out.println(((Apple)f)+ " and I am "+(((Apple)f).is_fresh()?"Fresh":"Not Frsh"));//((Apple)f).getName();
+//			else if (f instanceof Mango)
+//				System.out.println(((Mango)f)+ " and I am "+ (f.is_fresh()?"Fresh": "Not Fresh"));//((Mango)f).getName();
+//			else if (f instanceof Orange)
+//				System.out.println(f+ " and I am "+ (f.is_fresh()?"Fresh": "Not Fresh"));//Will call 
+//			if (f instanceof Apple || f instanceof Orange)
+//				f.set_fresh();
+			System.out.println(f+ " and I am "+(f.is_fresh()?"Fresh":"Not Frsh"));//((Apple)f).getName();
+		}	
 
-	
+}
+		
 //	private static Scanner Scanner(InputStream in) {
 //		// TODO Auto-generated method stub
 //		return null;

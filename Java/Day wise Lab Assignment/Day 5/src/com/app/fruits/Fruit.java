@@ -39,4 +39,7 @@ public class Fruit {
 		return fresh;
 	}
 	
+	public void set_fresh() {
+		fresh = false;
+	}
 }
