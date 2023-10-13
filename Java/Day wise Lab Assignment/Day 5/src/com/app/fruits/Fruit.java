@@ -51,8 +51,8 @@ public class Fruit {
 	
 	@Override
 	public boolean equals(Object obj) {
-		if (this.getClass().getName() == "Orange") {
-			
+		if (obj instanceof Orange || obj instanceof Apple) {
+			set_fresh();
 		}
 		return true;
 	}

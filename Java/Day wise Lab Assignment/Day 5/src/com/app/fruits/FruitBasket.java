@@ -87,18 +87,18 @@ public class FruitBasket {
 
 		
 		//5. Display name,color,weight , taste of all fresh fruits , in the basket.
-		for (Fruit f: fruitBasket) {
-//			if (f instanceof Apple)
-//				 System.out.println(((Apple)f)+ " and I am "+(((Apple)f).is_fresh()?"Fresh":"Not Frsh"));//((Apple)f).getName();
-//			else if (f instanceof Mango)
-//				System.out.println(((Mango)f)+ " and I am "+ (f.is_fresh()?"Fresh": "Not Fresh"));//((Mango)f).getName();
-//			else if (f instanceof Orange)
-//				System.out.println(f+ " and I am "+ (f.is_fresh()?"Fresh": "Not Fresh"));//Will call 
-			if (f instanceof Apple || f instanceof Orange)
-				f.set_fresh();
-			System.out.println(f+ " and I am "+(f.is_fresh()?"Fresh":"Not Frsh"));//((Apple)f).getName();
-		}	
-		
+//		for (Fruit f: fruitBasket) {
+////			if (f instanceof Apple)
+////				 System.out.println(((Apple)f)+ " and I am "+(((Apple)f).is_fresh()?"Fresh":"Not Frsh"));//((Apple)f).getName();
+////			else if (f instanceof Mango)
+////				System.out.println(((Mango)f)+ " and I am "+ (f.is_fresh()?"Fresh": "Not Fresh"));//((Mango)f).getName();
+////			else if (f instanceof Orange)
+////				System.out.println(f+ " and I am "+ (f.is_fresh()?"Fresh": "Not Fresh"));//Will call 
+//			if (f instanceof Apple || f instanceof Orange)
+//				f.set_fresh();
+//			System.out.println(f+ " and I am "+(f.is_fresh()?"Fresh":"Not Frsh"));//((Apple)f).getName();
+//		}	
+//		
 		//6. Mark a fruit in a basket , as stale(=not fresh)
 		System.out.println("Enter a index at which the fruit is not frsh.");
 		int index = sc.nextInt();
@@ -119,9 +119,26 @@ public class FruitBasket {
 //				f.set_fresh();
 			System.out.println(f+ " and I am "+(f.is_fresh()?"Fresh":"Not Frsh"));//((Apple)f).getName();
 		}	
+		for(int i=0;i<fruitBasket.length;i++) {
+			fruitBasket[i].equals(fruitBasket[i]);
+			System.out.println(fruitBasket[i]+ " and I am "+(fruitBasket[i].is_fresh()?"Fresh":"Not Fresh"));
+		}
+		
+		System.out.println("-------------------------------");
 		
 		for (Fruit f: fruitBasket) {
-			f.equals(fruitBasket);
+			f.equals(f);
+			System.out.println(f+ " and I am "+(f.is_fresh()?"Fresh":"Not Fresh"));
+		}
+		
+		System.out.println("Enter the index for the specific funtion of mystry item");
+		int i = sc.nextInt();
+		if (fruitBasket[i-1] instanceof Apple) {
+			((Apple)fruitBasket[i-1]).jam();
+		} else if (fruitBasket[i-1] instanceof Orange) {
+			((Orange)fruitBasket[i-1]).juice();
+		} else {
+			((Mango)fruitBasket[i-1]).pulp();
 		}
 
 }
