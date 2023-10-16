@@ -9,6 +9,8 @@ public class Test1 {
 		s += "12345";// s=s+"12345"
 		System.out.println(s);// hello12345
 		System.out.println(s.toUpperCase());//HELLO12345
+		String  a ="HIIBK";
+		System.out.println(a.toLowerCase());
 		System.out.println(s);//hello12345
 		System.out.println(s.replace('l', 'p'));//heppo12345
 		System.out.println(s);//hello12345

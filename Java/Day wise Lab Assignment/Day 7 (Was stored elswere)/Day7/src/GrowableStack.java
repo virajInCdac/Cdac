@@ -1,5 +1,5 @@
 
-public interface GrowableStack extends FixedStack {
-	void pushG(Object o);
+public interface GrowableStack {
+	void pushG(Customer C);
 	int popG();
 }

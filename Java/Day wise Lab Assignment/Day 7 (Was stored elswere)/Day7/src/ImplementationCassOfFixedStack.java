@@ -1,21 +1,21 @@
-import java.util.Arrays;
-
-public class ImplementationCassOfFixedStack implements FixedStack{
+public class ImplementationCassOfFixedStack implements FixedStack {
 
 	public Customer cust[] = new Customer[STACK_SIZE];
 	static int top;
 	static {
 		top = -1;
 	}
+
 	@Override
 	public void push(Customer c) {
 		System.out.println("In push");
-		if (top < STACK_SIZE) {
+		if (top < STACK_SIZE - 1) {
 			cust[++top] = c;
 		} else {
 			System.out.println("Stack Full!");
 		}
-		System.out.println("Top is "+top);
+		display();
+		System.out.println("Top is " + top);
 	}
 
 	@Override
@@ -28,11 +28,13 @@ public class ImplementationCassOfFixedStack implements FixedStack{
 		}
 		return 0;
 	}
-	
+
 	void display() {
 		System.out.println("In Display");
 		for (int i = 0; i <= top; i++) {
-			System.out.println("The customer details are: "+cust[i]); // Here cust[i] will call the toString of Customer class as cust[i] is a reference to Customer class
+			System.out.println("The customer details are: " + cust[i]); // Here cust[i] will call the toString of
+																		// Customer class as cust[i] is a reference to
+																		// Customer class
 		}
 	}
 
@@ -41,5 +43,4 @@ public class ImplementationCassOfFixedStack implements FixedStack{
 //		return "ID: "+cust[0].getId();// + " name: "+super.getName()+" Address: "+this.getAddress();
 //	}
 
-	
 }
