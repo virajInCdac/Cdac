@@ -7,7 +7,7 @@ public class Test1 {
 	public static void main(String[] args) {
 		// create Date class instance to represent curnt date n time
 		Date d1 = new Date();
-		System.out.println(d1);
+		System.out.println("Value of d1 is "+d1);
 		Date d2 = new Date(20000);
 		System.out.println(d2);
 		System.out.println(d1.before(d2));//f

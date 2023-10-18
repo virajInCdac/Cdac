@@ -9,9 +9,25 @@ package enums;
 public final class Color extends Enum
 {
 
-    private Color(String s, int i)
+    private Color(String s, int i, int additionalCost)
     {
         super(s, i);
+        this.additionalCost = additionalCost;
+    }
+
+    public int getAdditionalCost()
+    {
+        return additionalCost;
+    }
+
+    public void setAdditionalCost(int additionalCost)
+    {
+        this.additionalCost = additionalCost;
+    }
+
+    public String toString()
+    {
+        return (new StringBuilder(String.valueOf(name()))).append("with additional cost ").append(additionalCost).toString();
     }
 
     public static Color[] values()
@@ -32,14 +48,15 @@ public final class Color extends Enum
     public static final Color BLACK;
     public static final Color GREY;
     public static final Color SILVER;
+    private int additionalCost;
     private static final Color ENUM$VALUES[];
 
     static 
     {
-        WHITE = new Color("WHITE", 0);
-        BLACK = new Color("BLACK", 1);
-        GREY = new Color("GREY", 2);
-        SILVER = new Color("SILVER", 3);
+        WHITE = new Color("WHITE", 0, 5000);
+        BLACK = new Color("BLACK", 1, 10000);
+        GREY = new Color("GREY", 2, 6500);
+        SILVER = new Color("SILVER", 3, 8000);
         ENUM$VALUES = (new Color[] {
             WHITE, BLACK, GREY, SILVER
         });
