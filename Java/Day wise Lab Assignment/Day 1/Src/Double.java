@@ -5,7 +5,7 @@ Hint : Method of Scanner to use : hasNextDouble , nextDouble */
 import java.util.Scanner;
 
 class IsDouble{
-	public static void main (String[] input){
+	public static void main (String[] args){
 		double d1=0, d2=0;
 		System.out.println("Enter the Numbers");
 		Scanner scanner = new Scanner(System.in);
@@ -18,6 +18,7 @@ class IsDouble{
 			d2 = scanner.nextDouble();
 			System.out.println("first "+d1+" second "+d2);
 		}
+		else System.out.println("Wrong Input");
 		System.out.println("Avarage is"+(d1+d2)/2);
 		
 		//System.out.println("first "+d1+" second ");

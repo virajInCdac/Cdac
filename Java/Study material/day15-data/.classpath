@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="CCEE practice"/>
+	<classpathentry kind="src" path="code/day15.1/src"/>
+	<classpathentry kind="src" path="code/day15.2/src"/>
+	<classpathentry kind="src" path="ready code"/>
+	<classpathentry kind="output" path="code/day15.1/bin"/>
+</classpath>

@@ -1,0 +1,38 @@
+package core;
+
+import static java.time.LocalDate.*;
+
+import java.time.LocalDate;
+
+public class Grocery {
+	String Name;
+	double PricePerUnit;
+	double Quantity;
+	LocalDate LastUpdated;
+	
+	public String getName() {
+		return Name;
+	}
+	public double getPricePerUnit() {
+		return PricePerUnit;
+	}
+	public double getQuantity() {
+		return Quantity;
+	}
+	public LocalDate getLastUpdated() {
+		return LastUpdated;
+	}
+	public Grocery(String name, double pricePerUnit, int quantity) {
+		super();
+		Name = name;
+		PricePerUnit = pricePerUnit;
+		Quantity = quantity;
+		LastUpdated = now();
+	}
+	@Override
+	public String toString() {
+		return "Grocery [Name=" + Name + ", PricePerUnit=" + PricePerUnit + ", Quantity=" + Quantity + ", LastUpdated="
+				+ LastUpdated + "]";
+	}
+
+}

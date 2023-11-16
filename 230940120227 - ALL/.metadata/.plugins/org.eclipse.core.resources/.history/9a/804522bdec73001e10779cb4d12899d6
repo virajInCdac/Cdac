@@ -1,0 +1,11 @@
+package core;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public interface PopulateGroceryList {
+	public static List<Grocery> getGroceryList() {
+		List<Grocery> groceryList = new ArrayList<Grocery>();
+		return groceryList;
+	}
+}

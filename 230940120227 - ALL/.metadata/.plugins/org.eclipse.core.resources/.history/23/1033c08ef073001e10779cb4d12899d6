@@ -1,0 +1,67 @@
+package core;
+
+import static java.time.LocalDate.*;
+
+import java.time.LocalDate;
+import java.util.List;
+
+import CustomException.GroceryException;
+
+public class Grocery {
+	String Name;
+	double PricePerUnit;
+	double Quantity;
+	LocalDate LastUpdated;
+	
+	public String getName() {
+		return Name;
+	}
+	public double getPricePerUnit() {
+		return PricePerUnit;
+	}
+	public double getQuantity() {
+		return Quantity;
+	}
+	public LocalDate getLastUpdated() {
+		return LastUpdated;
+	}
+	public Grocery(String name, double pricePerUnit, int quantity) {
+		super();
+		Name = name;
+		PricePerUnit = pricePerUnit;
+		Quantity = quantity;
+		LastUpdated = now();
+	}
+	@Override
+	public String toString() {
+		return "Grocery [Name=" + Name + ", PricePerUnit=" + PricePerUnit + ", Quantity=" + Quantity + ", LastUpdated="
+				+ LastUpdated + "]";
+	}
+	public static void validateAllInputs(String name2, double pricePerUnit2, double quantity2, List<Grocery> groceryList) {
+		// TODO Auto-generated method stub
+		alreadyExists(name2, groceryList);
+	}
+	private static void alreadyExists(String name2, List<Grocery> groceryList) {
+		// TODO Auto-generated method stub
+		Grocery g = new Grocery(name2);
+		if (groceryList.contains(g)) {
+			
+		}
+	}
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		if (obj instanceof Grocery) {
+			String otherName = ((Grocery) obj).getName();
+			if (this.Name.toUpperCase().equals(otherName.toUpperCase())) {
+				throw new GroceryException("Grocery Already Present!!!");
+			}
+		}
+		return super.equals(obj);
+	}
+	public Grocery(String name) {
+		super();
+		Name = name;
+	}
+
+}

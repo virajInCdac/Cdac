@@ -1,0 +1,22 @@
+//Period 
+
+package Tester;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import core.Grocery;
+import core.PopulateGroceryList;
+
+public class Tester {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<Grocery> groceryList = PopulateGroceryList.getGroceryList();
+		groceryList.forEach(i -> System.out.println(i));
+		
+		System.out.println("Make a selection\n1: Add new Grocery\n2:Update Quantity\n3: Display Grocery"
+				+ "\n4: Remove all empty stock\n5: Display all with changes in Quantity during last 3 days");
+	}
+
+}

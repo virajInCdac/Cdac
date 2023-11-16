@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Day 1/Src"/>
+	<classpathentry kind="src" path="Day 2/src"/>
+	<classpathentry kind="src" path="Day 3/src"/>
+	<classpathentry kind="src" path="Day 4/Array/src"/>
+	<classpathentry kind="src" path="Day 5/src"/>
+	<classpathentry kind="src" path="Day 7 (Was stored elswere)/Day7/src"/>
+	<classpathentry kind="src" path="Day10/src"/>
+	<classpathentry kind="src" path="Day7/src"/>
+	<classpathentry kind="src" path="Solved Assignments"/>
+	<classpathentry kind="output" path="Day 1/Bin"/>
+</classpath>
